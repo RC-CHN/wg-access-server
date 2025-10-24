@@ -6,12 +6,12 @@ import (
 	"path/filepath"
 	"runtime"
 
+	"github.com/alecthomas/kingpin/v2"
 	"github.com/pkg/errors"
 	"github.com/place1/wg-access-server/cmd"
 	"github.com/place1/wg-access-server/cmd/migrate"
 	"github.com/place1/wg-access-server/cmd/serve"
 	"github.com/sirupsen/logrus"
-	"gopkg.in/alecthomas/kingpin.v2"
 )
 
 var (
