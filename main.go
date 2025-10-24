@@ -7,6 +7,7 @@ import (
 	"runtime"
 
 	"github.com/alecthomas/kingpin/v2"
+	"github.com/joho/godotenv"
 	"github.com/pkg/errors"
 	"github.com/place1/wg-access-server/cmd"
 	"github.com/place1/wg-access-server/cmd/migrate"
@@ -20,6 +21,9 @@ var (
 )
 
 func main() {
+	// load .env file if it exists
+	godotenv.Load()
+
 	// all the subcommands for wg-access-server
 	commands := []cmd.Command{
 		serve.Register(app),
